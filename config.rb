@@ -1,5 +1,5 @@
 # Size of the CoreOS cluster created by Vagrant
-$num_instances=1
+$num_instances=3
 
 # Used to fetch a new discovery token for a cluster of size $num_instances
 $new_discovery_url="https://discovery.etcd.io/new?size=#{$num_instances}"
@@ -53,7 +53,7 @@ end
 #$image_version = "current"
 
 # Official CoreOS channel from which updates should be downloaded
-#$update_channel='alpha'
+$update_channel='stable'
 
 # Log the serial consoles of CoreOS VMs to log/
 # Enable by setting value to true, disable with false
@@ -76,7 +76,7 @@ end
 # Customize VMs
 #$vm_gui = false
 #$vm_memory = 1024
-#$vm_cpus = 1
+$vm_cpus = 1
 #$vb_cpuexecutioncap = 100
 
 # Share additional folders to the CoreOS VMs
